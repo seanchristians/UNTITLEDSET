@@ -2,9 +2,10 @@ import bs4
 
 # All entries in the database must be standardized
 # no punctuation or capitalized characters are allowed
-# extract.normalize picks out illegal characters from input text
+# extract.normalize picks out illegal characters from input text based on extract.legal
+legal = range(97, 123)
+
 def normalize(text):
-	legal = range(97, 123)
 	return ''.join([c for c in text.lower() if ord(c) in legal])
 
 # Search through an html page from thesaurus.com to find synonym results
