@@ -1,9 +1,14 @@
 import bs4
 
+# All entries in the database must be standardized
+# no punctuation or capitalized characters are allowed
+# extract.normalize picks out illegal characters from input text
 def normalize(text):
 	legal = range(97, 123)
 	return ''.join([c for c in text.lower() if ord(c) in legal])
 
+# Search through an html page from thesaurus.com to find synonym results
+# convert the random tags into an array of useable data
 def synonyms(plain):
 	html = bs4.BeautifulSoup(plain, features="html.parser")
 	if html.find(class_="no-results-title"): return None
