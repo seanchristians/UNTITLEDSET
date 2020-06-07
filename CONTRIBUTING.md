@@ -2,7 +2,7 @@
 
 Bug reports, feature requests, and pull requests are always welcome and encouraged! Thanks for choosing to help out on the project.
 
-See the [`issue templates`](./github/ISSUE_TEMPLATE/) for various templates
+See the [`issue templates`](./.github/ISSUE_TEMPLATE/) for various templates
 
 Don't be afraid to contribute! Check out [this](https://www.drmaciver.com/2015/04/its-ok-for-your-open-source-library-to-be-a-bit-shitty/) blog post for some moral support. Remember, your code doesn't have to be perfect the first time. That's why it's open source: so other people can help you out. (Please read the [Code of Conduct](./CODE_OF_CONDUCT.md))
 
