@@ -2,7 +2,7 @@
 
 Bug reports, feature requests, and pull requests are always welcome and encouraged! Thanks for choosing to help out on the project.
 
-See the [`docs/`](./docs/) for various templates
+See the [`issue templates`](./github/ISSUE_TEMPLATE/) for various templates
 
 Don't be afraid to contribute! Check out [this](https://www.drmaciver.com/2015/04/its-ok-for-your-open-source-library-to-be-a-bit-shitty/) blog post for some moral support. Remember, your code doesn't have to be perfect the first time. That's why it's open source: so other people can help you out. (Please read the [Code of Conduct](./CODE_OF_CONDUCT.md))
 
@@ -34,7 +34,7 @@ Don't ever be afraid to suggest a feature. You can never know if someone else is
 
 ## Caching
 
-Caching can be difficult to deal with. Please reach out to [Sean Christians](https://github.com/seanchristians) if you have any suggestions. At present, the cache has these known issues:
+Caching can be difficult to deal with. Please reach out to me, [Sean Christians](https://github.com/seanchristians) if you have any suggestions. At present, the cache has these known issues:
 
 - The cache is never cleared of old items
 - Cached items are kept in use for 6 months. This seems reasonable, but no research has been conducted. Such as: how often does thesaurus.com add new words/change their results formula?
