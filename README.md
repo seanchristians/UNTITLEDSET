@@ -54,4 +54,4 @@ Although this is stated in the Limitation of Liability in the [license](./LICENS
 
 ---
 
-![Copyright](https://img.shields.io/badge/%C2%A9%202020-Sean%20Christians-orange)
+© 2020 Sean Christians
