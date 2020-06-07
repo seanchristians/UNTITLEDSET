@@ -2,13 +2,9 @@
 [![License](https://img.shields.io/github/license/seanchristians/eponym)](./LICENSE)
 ![Language](https://img.shields.io/github/languages/top/seanchristians/eponym)
 
-![Open Issues](https://img.shields.io/github/issues/seanchristians/eponym)
 ![Closed Issues](https://img.shields.io/github/issues-closed/seanchristians/eponym)
-![Open pull requests](https://img.shields.io/github/issues-pr/seanchristians/eponym)
-
 ![Commit Activity](https://img.shields.io/github/commit-activity/y/seanchristians/eponym)
-![Build](https://travis-ci.org/seanchristians/eponym.svg?branch=master)
-![](https://img.shields.io/badge/dev-Sean%20Christians-orange)
+[![Build Status](https://travis-ci.org/seanchristians/eponym.svg?branch=master)](https://travis-ci.org/seanchristians/eponym)
 
 # EPONYM
 
@@ -61,4 +57,4 @@ Although this is stated in the Limitation of Liability in the [license](./LICENS
 
 ---
 
-© 2020 Sean Christians
+![Copyright](https://img.shields.io/badge/%C2%A9%202020-Sean%20Christians-orange)
