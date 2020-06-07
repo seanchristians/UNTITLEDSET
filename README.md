@@ -40,12 +40,9 @@ optional arguments:
 
 # Caching
 
-Eponym relies on thesaurus.com. This site has been chosen for it's reliability and popularity. Thesaurus.com does not have an accessible API. Therefore, each word must be individually queried on the main page. Large volumes of searches would be bad for this site. As such, it's important to cache results not only for faster execution speed, but also to save their bandwidth. Hopefully they get an API soon. If you know of a site with an API to access synonyms, please see [CONTRIBUTING](./CONTRIBUTING.md)
-TL/DR: don't delete `.cache`.
+Eponym relies on thesaurus.com. This site has been chosen for it's reliability and popularity. Thesaurus.com does not have an accessible API. Therefore, each word must be individually queried on the main page. Large volumes of searches would be bad for this site. As such, it's important to cache results not only for faster execution speed, but also to save their bandwidth. Hopefully they get an API soon. If you know of a site with an API to access synonyms, please see [CONTRIBUTING](./CONTRIBUTING.md). **TL/DR**: don't delete `.cache`.
 
-I am looking into implementing [bradleyfowler123/thesaurus-api](https://github.com/bradleyfowler123/thesaurus-api).
-
-Please see [CONTRIBUTING](./CONTRIBUTING.md) to help out with caching issues.
+I am looking into implementing [bradleyfowler123/thesaurus-api](https://github.com/bradleyfowler123/thesaurus-api). Please see [CONTRIBUTING](./CONTRIBUTING.md) to help out with caching issues.
 
 # Languages
 
