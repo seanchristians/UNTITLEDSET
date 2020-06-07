@@ -1,10 +1,13 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4)](./CODE_OF_CONDUCT.md)
-![License](https://img.shields.io/github/license/seanchristians/eponym)
+[![License](https://img.shields.io/github/license/seanchristians/eponym)](./LICENSE)
 ![Language](https://img.shields.io/github/languages/top/seanchristians/eponym)
+
 ![Open Issues](https://img.shields.io/github/issues/seanchristians/eponym)
 ![Closed Issues](https://img.shields.io/github/issues-closed/seanchristians/eponym)
 ![Open pull requests](https://img.shields.io/github/issues-pr/seanchristians/eponym)
+
 ![Commit Activity](https://img.shields.io/github/commit-activity/y/seanchristians/eponym)
+![Build](https://travis-ci.org/seanchristians/eponym.svg?branch=master)
 ![](https://img.shields.io/badge/dev-Sean%20Christians-orange)
 
 # EPONYM
@@ -44,7 +47,7 @@ optional arguments:
 Eponym relies on thesaurus.com. This site has been chosen for it's reliability and popularity. Thesaurus.com does not have an accessible API. Therefore, each word must be individually queried on the main page. Large volumes of searches would be bad for this site. As such, it's important to cache results not only for faster execution speed, but also to save their bandwidth. Hopefully they get an API soon. If you know of a site with an API to access synonyms, please see [CONTRIBUTING](./CONTRIBUTING.md)
 TL/DR: don't delete `.cache`.
 
-I am looking into implementing (bradleyfowler123/thesaurus-api)[https://github.com/bradleyfowler123/thesaurus-api].
+I am looking into implementing [bradleyfowler123/thesaurus-api](https://github.com/bradleyfowler123/thesaurus-api).
 
 Please see [CONTRIBUTING](./CONTRIBUTING.md) to help out with caching issues.
 
@@ -54,7 +57,7 @@ Currently, the project only supports English. This is due to both sole use of th
 
 # Disclaimer
 
-Although this is stated in the Limitation of Liability in the [license](./LICENSE), I feel the need to restate this here: This project and the maintainers of this project do not assume responsibility for the actions of individuals using the project. We do not support malicious action against [thesaurus.com](https://www.thesaurus.com) such as Denial of Service attacks and breach of their [Terms of Service](https://www.dictionary.com/e/terms/) arising from use of this project.
+Although this is stated in the Limitation of Liability in the [license](./LICENSE), I feel the need to restate this here: This project and the maintainers of this project do not assume responsibility for the actions of individuals using the project. We do not support or condone malicious action against [thesaurus.com](https://www.thesaurus.com) such as Denial of Service attacks and breach of their [Terms of Service](https://www.dictionary.com/e/terms/) arising from use of this project.
 
 ---
 
