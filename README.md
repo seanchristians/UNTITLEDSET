@@ -14,7 +14,7 @@ Useful tool for generating variable names. Uses thesaurus.com
 
 Download the project. Make sure to move it to a directory included in your `$PYTHONPATH`
 ```sh
-git clone https://github.com/seanchristians/eponym/eponym
+git clone https://github.com/seanchristians/eponym
 ```
 (Coming to PyPi soon)
 
