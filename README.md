@@ -1,6 +1,7 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4)](./CODE_OF_CONDUCT.md)
 [![License](https://img.shields.io/github/license/seanchristians/eponym)](./LICENSE)
-![Language](https://img.shields.io/github/languages/top/seanchristians/eponym)
+![Language](https://img.shields.io/pypi/pyversions/eponym-alloy)
+[![Version](https://img.shields.io/pypi/v/eponym-alloy)](https://pypi.org/project/eponym-alloy/)
 
 ![Closed Issues](https://img.shields.io/github/issues-closed/seanchristians/eponym)
 ![Commit Activity](https://img.shields.io/github/commit-activity/y/seanchristians/eponym)
