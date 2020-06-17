@@ -8,19 +8,22 @@
 
 # EPONYM
 
-Useful tool for generating variable names. Uses thesaurus.com
+Useful tool for generating variable names. Uses [wordsapi.com](https://wordsapi.com)
 
 # Getting Started
 
-Download the project. To make it available as a package, create a symlink to eponym/src in a directory included in your `$PYTHONPATH`. The install script below will attempt to symlink to your user site-packages.
+## Source code
+
 ```sh
 git clone https://github.com/seanchristians/eponym
 pip3 install -r eponym/src/requirements.txt
-INSTALL=$(pwd)
-cd $(python3 -m site --user-site)
-ln -s $INSTALL/eponym/src eponym
 ```
-(Coming to PyPI soon)
+
+## PyPI
+
+```sh
+pip3 install eponym-alloy
+```
 
 # Usage
 
