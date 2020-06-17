@@ -69,7 +69,7 @@ def get(key, base):
 
 # purge the cache of expired data points
 def purge():
-	meter = int(time.time) - timeDelta
+	meter = int(time.time()) - timeDelta
 	cursor.execute("""
 		DELETE FROM synonyms
 		WHERE ts < ?;
