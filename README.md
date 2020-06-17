@@ -20,10 +20,16 @@ git clone https://github.com/seanchristians/eponym
 
 # Usage
 
-Eponym can be used as part of a project or by itself. Pass a single string sentence to eponym.synonyms to generate an array of synonyms. eponym.rand takes that array as input and returns a word according to some options.
+Eponym can be used as part of a project or by itself. Pass a single string sentence to eponym.synonyms to generate an array of synonyms. eponym.rand takes that array as input and returns a word according to some options. Eponym relies on [WordsAPI](https://www.wordsapi.com/) to generate synonyms. To use the service, create an account on [RapidAPI](https://rapidapi.com/) and get a free API key for [WordsAPI](https://rapidapi.com/dpventures/api/wordsapi).
+
+The script can interpret an API key from three different sources:
+- Any environment variable (defaults to `$APIKEY`)
+- A file
+- Direct input text
+To set your API key, you can define it in the script or run `export APIKEY="[RapidAPI Application Key]"`
 
 ```sh
-usage: p3 -m eponym [-h] [-l] [-w] [-s SEP] [-m MAX] words [words ...]
+usage: python3 -m eponym [-h] [-k KEY] [-l] [-w] [-s SEP] [-m MAX] words [words ...]
 
 Variable name generator
 
@@ -32,7 +38,8 @@ positional arguments:
 
 optional arguments:
   -h, --help         show this help message and exit
-  -l, --lower        output uppercase
+  -k KEY, --key KEY  api key
+  -l, --lower        output lowercase
   -w, --words        output word count
   -s SEP, --sep SEP  word separator
   -m MAX, --max MAX  maximum word length for each synonym
@@ -40,17 +47,11 @@ optional arguments:
 
 # Caching
 
-Eponym relies on thesaurus.com. This site has been chosen for it's reliability and popularity. Thesaurus.com does not have an accessible API. Therefore, each word must be individually queried on the main page. Large volumes of searches would be bad for this site. As such, it's important to cache results not only for faster execution speed, but also to save their bandwidth. Hopefully they get an API soon. If you know of a site with an API to access synonyms, please see [CONTRIBUTING](./CONTRIBUTING.md). **TL/DR**: don't delete `.cache`.
-
-I am looking into implementing [bradleyfowler123/thesaurus-api](https://github.com/bradleyfowler123/thesaurus-api). Please see [CONTRIBUTING](./CONTRIBUTING.md) to help out with caching issues.
+Eponym relies on [WordsAPI](https://www.wordsapi.com/). In order to reduce calls to the API and retain bandwidth, all requests go through `cache.get` which builds and maintains a local cache of searched results. `cache.py` refreshes the cache every `cache.timeDelta` which is currently set to 6 months.
 
 # Languages
 
-Currently, the project only supports English. This is due to both sole use of thesaurus.com and a filter which removes non English letters. See [CONTRIBUTING](./CONTRIBUTING.md) to help out!
-
-# Disclaimer
-
-Although this is stated in the Limitation of Liability in the [license](./LICENSE), I feel the need to restate this here: This project and the maintainers of this project do not assume responsibility for the actions of individuals using the project. We do not support or condone malicious action against [thesaurus.com](https://www.thesaurus.com) such as Denial of Service attacks and breach of their [Terms of Service](https://www.dictionary.com/e/terms/) arising from use of this project.
+Currently, the project only supports English. This is due to both sole use of wordsapi.com and a filter which removes non English letters. See [CONTRIBUTING](CONTRIBUTING.md) to help out!
 
 ---
 

@@ -1,11 +1,11 @@
-from eponym import cache, extract
+from eponym import cache
 import random, sys
 
-def synonyms(sentence=''):
+def synonyms(key, sentence=''):
 	sentence = sentence.split(' ') if len(sentence) > 0 else ''
 	syn = []
 	for base in sentence:
-		syn += cache.get(base)
+		syn += cache.get(key, base)
 	return syn
 
 def rand(syn, *, words=1, sep='', upper=False, maxWordLength=sys.maxsize):
