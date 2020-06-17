@@ -12,11 +12,14 @@ Useful tool for generating variable names. Uses thesaurus.com
 
 # Getting Started
 
-Download the project. Make sure to move it to a directory included in your `$PYTHONPATH`
+Download the project. To make it available as a package, create a symlink to eponym/src in a directory included in your `$PYTHONPATH`. The install script below will attempt to symlink to your user site-packages.
 ```sh
-git clone https://github.com/seanchristians/eponym
+git clone https://github.com/seanchristians/eponym # Download the project
+INSTALL=$(pwd)
+cd $(python3 -m site --user-site)
+ln -s $INSTALL/eponym/src eponym # symlink the project in your site-packages
 ```
-(Coming to PyPi soon)
+(Coming to PyPI soon)
 
 # Usage
 
