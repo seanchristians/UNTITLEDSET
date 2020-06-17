@@ -14,10 +14,11 @@ Useful tool for generating variable names. Uses thesaurus.com
 
 Download the project. To make it available as a package, create a symlink to eponym/src in a directory included in your `$PYTHONPATH`. The install script below will attempt to symlink to your user site-packages.
 ```sh
-git clone https://github.com/seanchristians/eponym # Download the project
+git clone https://github.com/seanchristians/eponym
+pip3 install -r eponym/src/requirements.txt
 INSTALL=$(pwd)
 cd $(python3 -m site --user-site)
-ln -s $INSTALL/eponym/src eponym # symlink the project in your site-packages
+ln -s $INSTALL/eponym/src eponym
 ```
 (Coming to PyPI soon)
 
@@ -25,11 +26,15 @@ ln -s $INSTALL/eponym/src eponym # symlink the project in your site-packages
 
 Eponym can be used as part of a project or by itself. Pass a single string sentence to eponym.synonyms to generate an array of synonyms. eponym.rand takes that array as input and returns a word according to some options. Eponym relies on [WordsAPI](https://www.wordsapi.com/) to generate synonyms. To use the service, create an account on [RapidAPI](https://rapidapi.com/) and get a free API key for [WordsAPI](https://rapidapi.com/dpventures/api/wordsapi).
 
+## API Key
+
 The script can interpret an API key from three different sources:
 - Any environment variable (defaults to `$APIKEY`)
 - A file
 - Direct input text
 To set your API key, you can define it in the script or run `export APIKEY="[RapidAPI Application Key]"`
+
+## Script functionality
 
 ```sh
 usage: python3 -m eponym [-h] [-k KEY] [-l] [-w] [-s SEP] [-m MAX] words [words ...]
@@ -47,6 +52,10 @@ optional arguments:
   -s SEP, --sep SEP  word separator
   -m MAX, --max MAX  maximum word length for each synonym
 ```
+
+## Purging the cache
+
+The script will not automatically clear the cache when terms expire after 6 months. Instead, you can write a cron job to do it yourself or do it manually. Run `python3 -c "import eponym; eponym.cache.purge()"` to clear the cache of expired items.
 
 # Caching
 

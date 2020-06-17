@@ -12,10 +12,10 @@ from eponym import interface
 # unintentional effects caused by manual use could be bad for thesaurus.com
 # __file__ is a realpath from /
 db = sqlite3.connect(os.path.dirname(__file__) + "/.cache")
-crsr = db.cursor()
+cursor = db.cursor()
 
 # The database stores the search term, the timestamp, and returned synonyms in json format
-crsr.execute("""
+cursor.execute("""
 CREATE TABLE IF NOT EXISTS synonyms (
 	base TEXT UNIQUE NOT NULL,
 	ts INTEGER NOT NULL,
@@ -37,12 +37,12 @@ def put(base, syn):
 	localTime = int(time.time())
 	syn = json.dumps(syn)# Synonyms as an array is easiest to store in JSON
 	try:
-		crsr.execute("""
+		cursor.execute("""
 			INSERT INTO synonyms
 			VALUES (?, ?, ?);
 		""", (base, localTime, syn))
 	except:
-		crsr.execute("""
+		cursor.execute("""
 			UPDATE synonyms
 			SET ts = ?,
 					syn = ?
@@ -56,13 +56,21 @@ def put(base, syn):
 def get(key, base):
 	base = interface.normalize(base)
 	try:# Get data from db
-		ts, syn = crsr.execute("SELECT ts, syn FROM synonyms WHERE base = ?", (base, )).fetchall()[0]
+		ts, syn = cursor.execute("SELECT ts, syn FROM synonyms WHERE base = ?", (base, )).fetchall()[0]
 		if time.time() - ts < timeDelta:
 			return json.loads(syn)# Remember, it's stored as JSON
-	finally:# get data from API
+	except:# get data from API
 		data = interface.get(key, base)
 		syn = data["synonyms"]
 
 		put(data["word"], data["synonyms"])# Store download in db
 
 		return syn
+
+# purge the cache of expired data points
+def purge():
+	meter = int(time.time) - timeDelta
+	cursor.execute("""
+		DELETE FROM synonyms
+		WHERE ts < ?;
+	""", (meter, ))
