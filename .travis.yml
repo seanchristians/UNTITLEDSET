@@ -2,5 +2,5 @@ language: python
 python:
   - "3.8"
 install:
-  - pip install -r eponym/requirements.txt
+  - pip install -r src/requirements.txt
 script: true
