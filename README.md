@@ -20,6 +20,16 @@ git clone https://github.com/seanchristians/eponym
 pip3 install -r eponym/src/requirements.txt
 ```
 
+## Make
+
+A Makefile has been included to easily build and re-install the package locally. Run `make` to create a wheel and install with pip. There are also other options available:
+- `build`: Build `.whl` and `.tar.gz`
+- `clean`: Remove build files: `build`, `dist`, `*.egg-info`
+- `wheel`: Build a `.whl`
+- `source`: Build a `.tar.gz`
+- `install`: Install locally from `dist`. This option also force-reinstalls.
+- `uninstall`: Locally uninstall the package with pip.
+
 ## PyPI
 
 ```sh

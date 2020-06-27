@@ -3,4 +3,5 @@ python:
   - "3.8"
 install:
   - pip install -r src/requirements.txt
-script: true
+script:
+  - make
